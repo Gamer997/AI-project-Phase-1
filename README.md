@@ -20,7 +20,23 @@ This project presents a genetic algorithm solution for generating schedules for 
 The task is to develop a generic solution for generating schedules for university courses using a Genetic Algorithm. The algorithm must read data from provided files, adhere to specified constraints, and optimize additional criteria.
 
 ### Constraints
+### Libraries Used
 
+- Pandas: For data manipulation.
+- NumPy: For array operations.
+- Matplotlib: For data visualization.
+
+### Data Loading
+
+The provided CSV files are loaded using Pandas:
+
+```python
+import pandas as pd
+
+courses = pd.read_csv('courses.csv')
+students_courses = pd.read_csv('studentCourse.csv')
+teachers_names = pd.read_csv('teachers.csv')
+```
 #### Hard Constraints
 
 - An exam must be scheduled for each course.
