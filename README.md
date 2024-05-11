@@ -1,4 +1,4 @@
-# University Course Scheduling Genetic Algorithm
+# **University Course Scheduling Genetic Algorithm**
 
 This project presents a genetic algorithm solution for generating schedules for university courses while satisfying various constraints and criteria. The implementation involves data loading, initial population generation, fitness calculation, selection, crossover, mutation, and iterations to evolve schedules that adhere to specified constraints and optimize additional criteria.
 
