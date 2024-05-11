@@ -26,17 +26,6 @@ The task is to develop a generic solution for generating schedules for universit
 - NumPy: For array operations.
 - Matplotlib: For data visualization.
 
-### Data Loading
-
-The provided CSV files are loaded using Pandas:
-
-```python
-import pandas as pd
-
-courses = pd.read_csv('courses.csv')
-students_courses = pd.read_csv('studentCourse.csv')
-teachers_names = pd.read_csv('teachers.csv')
-```
 #### Hard Constraints
 
 - An exam must be scheduled for each course.
@@ -55,35 +44,47 @@ teachers_names = pd.read_csv('teachers.csv')
 
 ## Implementation
 
-### Initial Population Generation
+### 1. Data Loading
+
+The provided CSV files are loaded using Pandas:
+
+```python
+import pandas as pd
+
+courses = pd.read_csv('courses.csv')
+students_courses = pd.read_csv('studentCourse.csv')
+teachers_names = pd.read_csv('teachers.csv')
+```
+
+### 2. Initial Population Generation
 
 The initial population of schedules is generated randomly using a function `generate_random_schedule`. This function randomly assigns courses to teachers, classrooms, and time slots while ensuring that hard constraints are not violated.
 
-### Fitness Calculation
+### 3. Fitness Calculation
 
 The fitness of each schedule is calculated based on constraints and criteria using the function `calculate_fitness`. This function evaluates the schedule's adherence to both hard constraints (such as ensuring an exam is scheduled for each course) and soft constraints (such as faculty break time optimization).
 
-### Selection
+### 4. Selection
 
 Roulette wheel selection is used to select the best schedules based on their fitness values. This method assigns a probability of selection to each schedule based on its fitness, and schedules with higher fitness have a higher chance of being selected as parents for crossover.
 
-### Crossover
+### 5. Crossover
 
 Single-point crossover is applied to generate offspring from selected parent schedules. This process involves selecting a random crossover point and combining genetic material from two parent schedules to create two new offspring schedules.
 
-### Mutation
+### 6. Mutation
 
 Mutation is optionally applied to introduce diversity into the population. This process involves randomly altering one or more elements of a schedule to explore new solutions and prevent premature convergence.
 
-### Iterations
+### 7. Iterations
 
 The genetic algorithm iterates for a specified number of iterations, updating the population at each iteration. During each iteration, selection, crossover, and mutation are performed to evolve the population towards better solutions.
 
-### Results Visualization
+### 8. Results Visualization
 
 The best schedule and its details are displayed in a table format. Additionally, fitness scores of all schedules are visualized using a line plot to track the optimization progress over iterations.
 
-## Conclusion
+## 9. Conclusion
 
 This implementation provides a robust solution for university course scheduling using a genetic algorithm, effectively satisfying constraints and optimizing criteria. The genetic algorithm approach offers flexibility and scalability, making it suitable for complex scheduling problems in educational institutions.
 
