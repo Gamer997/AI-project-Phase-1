@@ -88,6 +88,10 @@ The best schedule and its details are displayed in a table format. Additionally,
 
 This implementation provides a robust solution for university course scheduling using a genetic algorithm, effectively satisfying constraints and optimizing criteria. The genetic algorithm approach offers flexibility and scalability, making it suitable for complex scheduling problems in educational institutions.
 
+## Contributors
+- [Abdul Ahad](https://github.com/AbdulahadIltaf)
+- [Shahzaib Ali](https://github.com/Gamer997)
+
 ## Want to learn more about Genetic Algorithms
 
 - [What are Genetic Algorithms](https://www.youtube.com/watch?v=XP2sFzp2Rig&ab_channel=argonaut)
